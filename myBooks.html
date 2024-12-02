@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+    <h1>My Books</h1>
+
+    <table border="1">
+        <tr>
+            <th><u>Book Name</u></th>
+            <th><u>Book Author</u></th>
+          </tr>
+        {% for book in bookDetails %}
+        <tr>
+            <td>{{book[0]}}</td>
+            <td>{{book[1]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
